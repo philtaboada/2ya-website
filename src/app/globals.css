@@ -1,14 +1,51 @@
 @import "tailwindcss";
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 
 :root {
+  /* Colores originales del proyecto */
   --background: #ffffff;
   --foreground: #171717;
+  /* Paleta de colores 2YA */
+  --primary: #D12966;
+  --primary-light: #FF4384;
+  --primary-lighter: #FEA3B4;
+  --primary-dark: #320D1E;
+  --secondary: #FF85B3;
+  --accent: #FFD700;
+  --white: #FFFFFF;
+  --light: #FFF5F9;
+  --gray-light: #F8F8FF;
+  --gray: #CCCCCC;
+  --gray-dark: #666666;
+  --dark: #333333;
+  --black: #000000;
+  --success: #4CAF50;
+  --warning: #FFC107;
+  --danger: #F44336;
+  --info: #2196F3;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-primary: #D12966;
+  --color-primary-light: #FF4384;
+  --color-primary-lighter: #FEA3B4;
+  --color-primary-dark: #320D1E;
+  --color-secondary: #FF85B3;
+  --color-accent: #FFD700;
+  --color-white: #FFFFFF;
+  --color-light: #FFF5F9;
+  --color-gray-light: #F8F8FF;
+  --color-gray: #CCCCCC;
+  --color-gray-dark: #666666;
+  --color-dark: #333333;
+  --color-black: #000000;
+  --color-success: #4CAF50;
+  --color-warning: #FFC107;
+  --color-danger: #F44336;
+  --color-info: #2196F3;
+  --font-sans: 'Montserrat';
   --font-mono: var(--font-geist-mono);
 }
 
@@ -19,8 +56,70 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat';
+  line-height: 1.6;
+}
+
+/* Animaciones sutiles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* Hover effects */
+.hover-lift:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
