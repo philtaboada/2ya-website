@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 export default function WaitlistHero() {
   return (
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-32">

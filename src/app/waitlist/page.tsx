@@ -1,5 +1,7 @@
 'use client'
 
+/* eslint-disable @next/next/no-img-element */
+
 import { useState } from 'react'
 import WaitlistHeader from '@/components/WaitlistHeader'
 import WaitlistHero from '@/components/WaitlistHero'

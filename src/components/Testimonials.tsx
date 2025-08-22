@@ -39,7 +39,7 @@ export default function Testimonials() {
               className="bg-light rounded-2xl p-8 relative hover-lift animate-fade-in-up"
               style={{animationDelay: `${index * 0.2}s`}}
             >
-              <div className="absolute top-6 left-6 text-5xl opacity-10">"</div>
+              <div className="absolute top-6 left-6 text-5xl opacity-10">&quot;</div>
               <div className="relative z-10">
                 <p className="text-gray-dark mb-8 leading-relaxed italic">
                   {testimonial.text}
